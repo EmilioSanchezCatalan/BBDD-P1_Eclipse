@@ -31,6 +31,12 @@ public class Personas {
     public void SetTlf(String Tlf) {
         this.Tlf = Tlf;
     }
+	public int getId() {
+		return id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
     
     
 }

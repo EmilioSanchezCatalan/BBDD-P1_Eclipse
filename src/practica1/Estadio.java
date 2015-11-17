@@ -1,5 +1,7 @@
 package practica1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Emilio y Noelia
@@ -7,16 +9,39 @@ package practica1;
 public class Estadio {
     
     private int idestadio;
+    private String nombre;
     private String Direccion;
     private String Ciudad;
     private int Capacidad;
-
-    public Estadio(int idestadio, String Direccion, String Ciudad, int Capacidad) {
-        this.idestadio = idestadio;
-        this.Direccion = Direccion;
-        this.Ciudad = Ciudad;
-        this.Capacidad = Capacidad;
+    private Scanner scanf = new Scanner(System.in);
+    public Estadio() {
+        
     }
-    
+    public void SetData(){
+    	System.out.print("id: ");
+    	this.idestadio = scanf.nextInt();
+    	scanf.nextLine();
+    	System.out.print("nombre: ");
+    	this.nombre = scanf.nextLine();
+    	System.out.print("direccion: ");
+    	this.Direccion = scanf.nextLine();
+    	System.out.print("ciudad: ");
+    	this.Ciudad = scanf.nextLine();
+    	System.out.print("capacidad: ");
+    	this.Capacidad = scanf.nextInt();
+    	
+    }
+	public int getIdestadio() {
+		return idestadio;
+	}
+	public String getDireccion() {
+		return Direccion;
+	}
+	public String getCiudad() {
+		return Ciudad;
+	}
+	public int getCapacidad() {
+		return Capacidad;
+	}
     
 }

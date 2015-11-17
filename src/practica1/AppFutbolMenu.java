@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class AppFutbolMenu {
 	public static void main(String[] args) {
     	 int opcionw1; //opcion switch1
+    	 AppFutbol app = new AppFutbol();
     	 do{
     		 System.out.println("Menu: Introduzca Opcion(0 para salir):");
     		 System.out.println("1:  Alta Equipo");
@@ -41,10 +42,28 @@ public class AppFutbolMenu {
             switch (opcionw1){
             
             	case 1:
-            		AppFutbol ap = new AppFutbol();
-            		Jugador otro = new Jugador(0,null);
-            		otro = ap.altaJugador();
-            		otro.ListarJugador();
+            		app.setlEquipos(app.altaEquipo());
+            		break;
+            	case 3:
+            		int id;
+            		System.out.print("id del quipo.? ");
+            		id = scanf.nextInt();
+            		app.setlJugadores(app.altaJugador(app.getEquipo(id)));
+            		break;
+            	case 5:
+            		app.setlArbitros(app.altaArbitro());
+            		break;
+            	case 7:
+            		app.setlEstadios(app.altaEstadio());
+            		break;
+            	case 10:
+            		app.listarEquipos();
+            	case 11:
+            		app.listarEstadios();
+            		break;
+            	case 12:
+            		app.listarArbitros();
+            	case 14:
             		break;
             	default:
             		System.out.println("Opcion incorrecta");
