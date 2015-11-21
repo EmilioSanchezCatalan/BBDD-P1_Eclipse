@@ -46,12 +46,27 @@ public class AppFutbolMenu {
             		break;
             	case 3:
             		int id;
-            		System.out.print("id del quipo.? ");
+            		System.out.print("id del equipo: ");
+            		id = scanf.nextInt();
+            		app.bajaEquipo(app.getEquipo(id));
+            		break;
+            	case 3:
+            		System.out.print("id del equipo: ");
             		id = scanf.nextInt();
             		app.setlJugadores(app.altaJugador(app.getEquipo(id)));
             		break;
+            	case 4:
+            		System.out.print("id del jugador: ");
+            		id = scanf.nextInt();
+            		app.bajaJugador(app.getJugador(id));
+            		break;
             	case 5:
             		app.setlArbitros(app.altaArbitro());
+            		break;
+            	case 6:
+            		System.out.print("id del arbitro: ");
+            		id = scanf.nextInt();
+            		app.bajaArbitro(app.getArbitros(id));
             		break;
             	case 7:
             		app.setlEstadios(app.altaEstadio());

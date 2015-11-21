@@ -30,30 +30,37 @@ public class AppFutbol {
     	e.SetData();
     	return e;
     } 
-    //public boolean bajaEquipo(){
-        
-    //}
+    
+    public void bajaEquipo(Equipo e){
+    	lEquipos.remove(e.getIdequipo());
+    	
+    }
+    
     public Jugador altaJugador(Equipo e){
        
         Jugador j = new Jugador(0,null);
         j.SetData();
         e.AltaJugador(j);
-        return j;
         
+        return j;
+     }
+    
+    public void bajaJugador(Jugador j){
+    	    	
+    	lJugadores.remove(j.getId());
     }
     
-    //public boolean bajaJugador(){
-        
-    //}
     public Arbitro altaArbitro(){
         Arbitro a = new Arbitro(0,null);
         a.SetData();
         return a;
     }
-	/*
-    public boolean bajaArbitro(){
-        
-    }*/
+	
+    public void bajaArbitro(Arbitro a){
+    	lArbitros.remove(a.id);
+    	
+    }
+    
     public Estadio altaEstadio(){
     	Estadio e = new Estadio();
     	e.SetData();
@@ -142,7 +149,14 @@ public class AppFutbol {
 	public void setLpartidos(Partido p) {
 		lpartidos.add(p);
 	}
-	public Equipo getEquipo(int id){
+	public Equipo getEquipo(int id){//metemos el id y devuelve el equipo
 		return lEquipos.get(id);
 	}
+	public Jugador getJugador(int id){//metemos el id y devuelve el jugador
+		return lJugadores.get(id);
+	}
+	public Arbitro getArbitros(int id){//metemos el id y devuelve el arbitro
+		return lArbitros.get(id);		
+	}
 }   
+
