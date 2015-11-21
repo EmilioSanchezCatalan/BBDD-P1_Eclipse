@@ -17,10 +17,10 @@ public class Jugador extends Personas{
         super(id,nombre);
     }
     public void SetData(){
-    	System.out.print("id: ");
+    	System.out.print("Id: ");
     	id = scanf.nextInt();
     	scanf.nextLine();
-    	System.out.print("nombre: ");
+    	System.out.print("Nombre: ");
     	nombre = scanf.nextLine();
     	System.out.print("Salario: ");
     	salario = scanf.nextInt();
@@ -31,7 +31,23 @@ public class Jugador extends Personas{
     	titular = scanf.nextBoolean();
     	System.out.print("Numero de Camiseta: ");
     	num = scanf.nextInt();
+    	System.out.print("Email: ");
+    	
     }
+    
+    public int getSalario() {
+		return salario;
+	}
+    public String getPosicion() {
+		return posicion;
+	}
+    public boolean getTitular() {
+		return titular;
+	}
+    public int getNum() {
+		return num;
+	}
+   
 	
     
 }

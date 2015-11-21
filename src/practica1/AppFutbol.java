@@ -49,9 +49,9 @@ public class AppFutbol {
         return j;
      }
     
-    public void bajaJugador(Jugador j){
+    public void bajaJugador(int id){
     	    	
-    	lJugadores.remove(j.getId());
+    	lJugadores.remove(lJugadores.get(id));
     }
     
     public Arbitro altaArbitro(){
@@ -60,8 +60,8 @@ public class AppFutbol {
         return a;
     }
 	
-    public void bajaArbitro(Arbitro a){
-    	lArbitros.remove(a.id);
+    public void bajaArbitro(int id){
+    	lArbitros.remove(lArbitros.get(id));
     	
     }
     
@@ -71,7 +71,7 @@ public class AppFutbol {
     	return e;
     }
     /*public Partido altaPartido(){
-        
+    	
     }
     public boolean bajaPartido(){
         
@@ -122,13 +122,43 @@ public class AppFutbol {
     void listarPartidos(dado un equipo){
         
     }
-    void listarJugadores(..dada una psicion ene le campo..){
-        
-    }
-    void listarJugadoresEquipo(..dado un equipo){
-        
+    */
+    public void listarJugadores(String posicion){
+    	
+    	Collection <Jugador> juga = new ArrayList<Jugador>();
+    	juga.addAll(lJugadores.values());
+    	    	
+    	for (Jugador jugador:juga){
+    		String pos = jugador.getPosicion();
+    		if(posicion.equals(pos)){
+    			System.out.println("------------------------------------------------------------");
+	    		System.out.println("Nombre: "+jugador.getNombre());
+	    		System.out.println("Id: "+jugador.getId());
+	    		System.out.println("Numero de la camiseta: "+jugador.getNum());
+	    		System.out.println("Telefono: "+jugador.getTlf());
+	    		System.out.println("Salario: "+jugador.getSalario());
+	    		System.out.println("Email: "+jugador.getEmail());
+	    		System.out.println("Titular: "+jugador.getTitular());
+	    			    		
+    		}
+    	}
     }
     
+    public void listarJugadoresEquipo(int id){
+    	Collection <Equipo> e = new ArrayList<Equipo>();
+    	e.addAll(lEquipos.values());
+    	for (Equipo equipos:e){
+    		int idequipo = equipos.getIdequipo();
+    		if(idequipo == id){
+    			System.out.println("------------------------------------------------------------");
+    			System.out.println("Nombre: "+equipos.ljuga);
+    		}
+    	}
+    	
+    }
+    	
+    
+    /*
     public void Salvar(){
         
     }
@@ -161,11 +191,7 @@ public class AppFutbol {
 	public Equipo getEquipo(int id){//metemos el id y devuelve el equipo
 		return lEquipos.get(id);
 	}
-	public Jugador getJugador(int id){//metemos el id y devuelve el jugador
-		return lJugadores.get(id);
-	}
-	public Arbitro getArbitros(int id){//metemos el id y devuelve el arbitro
-		return lArbitros.get(id);		
-	}
+	
+	
 }   
 

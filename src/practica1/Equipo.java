@@ -34,6 +34,7 @@ public class Equipo {
     public void AltaJugador(Jugador j){
     	
         ljuga.add(j);
+        
     }
     
     public void BajaJugador(Jugador j){
@@ -52,4 +53,5 @@ public class Equipo {
 	public int getPosicion() {
 		return posicion;
 	}
+	
 }

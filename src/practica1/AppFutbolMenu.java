@@ -54,14 +54,14 @@ public class AppFutbolMenu {
             		app.bajaEquipo(app.getEquipo(id));
             		break;
             	case 3:
-            		System.out.print("id del quipo: ");
+            		System.out.print("id del equipo: ");
             		id = scanf.nextInt();
             		app.setlJugadores(app.altaJugador(app.getEquipo(id)));
             		break;
             	case 4:
             		System.out.print("id del jugador: ");
             		id = scanf.nextInt();
-            		app.bajaJugador(app.getJugador(id));
+            		app.bajaJugador(id);
             		break;
             		
             	case 5:
@@ -70,7 +70,7 @@ public class AppFutbolMenu {
             	case 6:
             		System.out.print("id del arbitro: ");
             		id = scanf.nextInt();
-            		app.bajaArbitro(app.getArbitros(id));
+            		app.bajaArbitro(id);
             		break;
             	case 7:
             		app.setlEstadios(app.altaEstadio());
@@ -83,7 +83,17 @@ public class AppFutbolMenu {
             		break;
             	case 12:
             		app.listarArbitros();
-            	case 14:
+            	case 16:
+            		String posicion;
+            		System.out.print("Dime la posicion: ");
+                	scanf.nextLine();
+            		posicion = scanf.nextLine();
+            		app.listarJugadores(posicion);
+            		break;
+            	case 17:
+            		System.out.print("Dime la id: ");
+                	id = scanf.nextInt();
+            		app.listarJugadoresEquipo(id);
             		break;
             	default:
             		System.out.println("Opcion incorrecta");
