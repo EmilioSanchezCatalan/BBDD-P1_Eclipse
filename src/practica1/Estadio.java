@@ -34,6 +34,9 @@ public class Estadio {
 	public int getIdestadio() {
 		return idestadio;
 	}
+	public String getNombre() {
+		return nombre;
+	}
 	public String getDireccion() {
 		return Direccion;
 	}

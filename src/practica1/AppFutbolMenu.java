@@ -8,7 +8,8 @@ import java.util.Scanner;
  */
 public class AppFutbolMenu {
 	public static void main(String[] args) {
-    	 int opcionw1; //opcion switch1
+    	 int opcionw1; //opción switch1
+    	 Scanner scanf = new Scanner(System.in);
     	 AppFutbol app = new AppFutbol();
     	 do{
     		 System.out.println("Menu: Introduzca Opcion(0 para salir):");
@@ -35,7 +36,7 @@ public class AppFutbolMenu {
     		 System.out.println("21: Calcular posiciones");
     		 System.out.print("Opcion: ");
 
-            Scanner scanf= new Scanner(System.in);
+            
             opcionw1 = scanf.nextInt();
 
             //switch1
@@ -58,6 +59,7 @@ public class AppFutbolMenu {
             		break;
             	case 10:
             		app.listarEquipos();
+            		break;
             	case 11:
             		app.listarEstadios();
             		break;
@@ -72,6 +74,6 @@ public class AppFutbolMenu {
         
         
         }while(opcionw1!=0);//fin switch1
-        
+        scanf.close();
     }
 }

@@ -18,18 +18,18 @@ public class Jugador extends Personas{
     }
     public void SetData(){
     	System.out.print("id: ");
-    	this.id = scanf.nextInt();
+    	id = scanf.nextInt();
     	scanf.nextLine();
     	System.out.print("nombre: ");
-    	this.nombre = scanf.nextLine();
+    	nombre = scanf.nextLine();
     	System.out.print("Salario: ");
-    	this.salario = scanf.nextInt();
+    	salario = scanf.nextInt();
     	scanf.nextLine();
     	System.out.print("Posicion: ");
-    	this.posicion = scanf.nextLine();
+    	posicion = scanf.nextLine();
     	System.out.print("Titular[S/N]: ");
-    	this.titular = scanf.nextBoolean();
+    	titular = scanf.nextBoolean();
     	System.out.print("Numero de Camiseta: ");
-    	this.num = scanf.nextInt();
+    	num = scanf.nextInt();
     }
 }

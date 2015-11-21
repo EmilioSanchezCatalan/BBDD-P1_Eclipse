@@ -36,11 +36,15 @@ public class Equipo {
     public void BajaJugador(Jugador j){
         ljuga.remove(j);
     }
+    
 	public int getIdequipo() {
 		return idequipo;
 	}
-	public Estadio getEsta() {
-		return esta;
+	public String getNombre() {
+		return nombre;
+	}
+	public int getEsta() {
+		return esta.getIdestadio();
 	}
 	public int getPosicion() {
 		return posicion;

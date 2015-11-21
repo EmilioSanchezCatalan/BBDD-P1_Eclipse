@@ -26,8 +26,12 @@ public class AppFutbol {
     	lpartidos = new ArrayList<Partido>();
     }
     public Equipo altaEquipo(){
+    	int id;
     	Equipo e = new Equipo();
     	e.SetData();
+    	System.out.print("id de su estadio: ");
+    	id = scanf.nextInt();
+    	e.AltaEstadio(lEstadios.get(id));
     	return e;
     } 
     //public boolean bajaEquipo(){
@@ -71,6 +75,7 @@ public class AppFutbol {
     	for (Estadio estadio:e){
     		System.out.println("------------------------------------------------------------");
     		System.out.println("id: "+estadio.getIdestadio());
+    		System.out.println("nombre: "+estadio.getNombre());
     		System.out.println("direccion: "+estadio.getDireccion());
     		System.out.println("Ciudad: "+estadio.getCiudad());
     		System.out.println("Capacidad: "+estadio.getCapacidad());
@@ -82,8 +87,11 @@ public class AppFutbol {
     	Collection <Equipo> e = new ArrayList<Equipo>();
     	e.addAll(lEquipos.values());
     	for (Equipo equipos:e){
+    		System.out.println("------------------------------------------------------------");
     		System.out.println("id: "+equipos.getIdequipo());
+    		System.out.println("nombre: "+equipos.getNombre());
     		System.out.println("posicion: "+equipos.getPosicion());
+    		System.out.println("id de su estadio: "+equipos.getEsta());
     	}
     	
     }
@@ -91,6 +99,7 @@ public class AppFutbol {
     	Collection <Arbitro> a = new ArrayList<Arbitro>();
     	a.addAll(lArbitros.values());
     	for (Arbitro arbitros:a){
+    		System.out.println("------------------------------------------------------------");
     		System.out.println("id: "+arbitros.getId());
     		System.out.println("nombre: "+arbitros.getNombre());
     		System.out.println("tipo: "+arbitros.getTipo());
