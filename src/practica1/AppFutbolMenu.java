@@ -9,8 +9,10 @@ import java.util.Scanner;
 public class AppFutbolMenu {
 	public static void main(String[] args) {
     	 int opcionw1; //opción switch1
+    	 int id;
     	 Scanner scanf = new Scanner(System.in);
     	 AppFutbol app = new AppFutbol();
+    	 
     	 do{
     		 System.out.println("Menu: Introduzca Opcion(0 para salir):");
     		 System.out.println("1:  Alta Equipo");
@@ -45,14 +47,30 @@ public class AppFutbolMenu {
             	case 1:
             		app.setlEquipos(app.altaEquipo());
             		break;
+            	case 2:
+             		
+             		System.out.print("id del equipo: ");
+            		id = scanf.nextInt();
+            		app.bajaEquipo(app.getEquipo(id));
+            		break;
             	case 3:
-            		int id;
-            		System.out.print("id del quipo.? ");
+            		System.out.print("id del quipo: ");
             		id = scanf.nextInt();
             		app.setlJugadores(app.altaJugador(app.getEquipo(id)));
             		break;
+            	case 4:
+            		System.out.print("id del jugador: ");
+            		id = scanf.nextInt();
+            		app.bajaJugador(app.getJugador(id));
+            		break;
+            		
             	case 5:
             		app.setlArbitros(app.altaArbitro());
+            		break;
+            	case 6:
+            		System.out.print("id del arbitro: ");
+            		id = scanf.nextInt();
+            		app.bajaArbitro(app.getArbitros(id));
             		break;
             	case 7:
             		app.setlEstadios(app.altaEstadio());

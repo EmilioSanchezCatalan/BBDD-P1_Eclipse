@@ -18,6 +18,7 @@ public class Equipo {
     public Equipo(){
     	ljuga = new ArrayList<Jugador>();
     }
+    
     public void SetData(){
     	System.out.print("id: ");
     	idequipo = scanf.nextInt();
@@ -31,12 +32,14 @@ public class Equipo {
     	esta = e;
     }
     public void AltaJugador(Jugador j){
+    	
         ljuga.add(j);
     }
+    
     public void BajaJugador(Jugador j){
         ljuga.remove(j);
     }
-    
+
 	public int getIdequipo() {
 		return idequipo;
 	}

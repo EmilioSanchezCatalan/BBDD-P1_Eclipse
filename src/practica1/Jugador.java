@@ -32,4 +32,6 @@ public class Jugador extends Personas{
     	System.out.print("Numero de Camiseta: ");
     	num = scanf.nextInt();
     }
+	
+    
 }
