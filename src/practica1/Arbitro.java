@@ -1,31 +1,24 @@
 package practica1;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Emilio y Noelia
  */
 public class Arbitro extends Personas {
-    
-    private String tipo;
-    private Scanner scanf = new Scanner(System.in);
-    public Arbitro(int id, String nombre) {
-        super(id, nombre);
-    }
-    public void SetData(){
-    	System.out.print("id: ");
-    	this.id = scanf.nextInt();
-    	scanf.nextLine();
-    	System.out.print("nombre: ");
-    	this.nombre = scanf.nextLine();
-    	System.out.print("tipo: ");
-    	this.tipo = scanf.nextLine();
-    }
+
+	private String tipo;
+
+	public Arbitro(int id, String nombre, String email, String Tlf, String tipo) {
+		super(id, nombre, email, Tlf);
+		this.tipo=tipo;
+	}
+
 	public String getTipo() {
 		return tipo;
 	}
-    
 
-    
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
 }
